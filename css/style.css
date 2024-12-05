@@ -9843,20 +9843,13 @@ a {
       height: 1px;
       background: #d3d8dc; }
 
-      video {
-        position: absolute;
+
+      .fullscreen-gif {
+        position: fixed; /* Fix the image in place */
         top: 0;
         left: 0;
         width: 100vw; /* Full width of the viewport */
         height: 100vh; /* Full height of the viewport */
-        object-fit: cover; /* Ensures the video covers the viewport without distortion */
-        z-index: -1; /* Push video to the background */
-      }
-
-      @media (max-width: 768px) {
-        .responsive-video {
-          height: 100vh; /* Make the video take full height on mobile */
-          object-fit: cover; /* Zoom in and cover the screen */
-          width: 100vw; /* Full width of the viewport */
-        }
+        object-fit: cover; /* Ensure the image scales to cover the entire area */
+        z-index: -1; /* Make sure the GIF stays behind other content */
       }
