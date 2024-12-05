@@ -87,12 +87,18 @@
 		Your browser does not support the video tag.
 	  </video> -->
 
-	<video id="myVideo" width="320" height="240" controls onerror="this.style.display='none'; document.getElementById('fallbackImage').style.display='block';">
+<!-- 	<video id="myVideo" width="320" height="240" controls onerror="this.style.display='none'; document.getElementById('fallbackImage').style.display='block';">
     <source src="glitch.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-<img id="fallbackImage" src="glitch.jpg" alt="Fallback image" style="display: none; width: 320px; height: 240px;">
+<img id="fallbackImage" src="glitch.jpg" alt="Fallback image" style="display: none; width: 320px; height: 240px;"> -->
+
+
+	<picture>
+    <source src="https://raw.githubusercontent.com/cronwel91/majasajt/main/glitch.mp4" type="video/mp4">
+    <img src="glitch.jpg" alt="Fallback image" width="320" height="240">
+</picture>
 
 
 
