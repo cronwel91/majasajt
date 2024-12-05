@@ -9843,27 +9843,27 @@ a {
       height: 1px;
       background: #d3d8dc; }
       
-      video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw; /* Full width of the viewport */
-        height: 100vh; /* Full height of the viewport */
-        object-fit: cover; /* Ensures the video covers the viewport without distortion */
-        z-index: -1; /* Push video to the background */
+      html, body {
+        margin: 0; /* Remove default browser margins */
       }
       
+      video {
+        position: absolute;
+        width: 100vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+        object-fit: cover; /* Ensure the video covers the entire area without distortion */
+        z-index: 4; /* Push the video above other content */
+        visibility: visible; /* Ensure the video is visible */
+      }
+      
+      /* Media query for small screens (mobile devices) */
       @media (max-width: 768px) {
-        .responsive-video {
-          width: 100vh; /* Set width to 100% of viewport height */
-          height: 100vw; /* Set height to 100% of viewport width */
-          object-fit: cover; /* Ensures the video still covers the screen */
-          transform: rotate(90deg); /* Rotate the video by 90 degrees */
-          transform-origin: center center; /* Ensures the video rotates around the center */
-          top: 50%; /* Vertically center the rotated video */
-          left: 50%; /* Horizontally center the rotated video */
-          margin-top: -50vw; /* Adjust for the video to fit properly after rotation */
-          margin-left: -50vh; /* Adjust for the video to fit properly after rotation */
+        video {
+          transform: rotate(90deg); /* Rotate video by 90 degrees */
+          transform-origin: bottom left; /* Set the rotation origin to the bottom left */
+          width: 100vh; /* Set the width to the full height of the viewport */
+          height: 100vw; /* Set the height to the full width of the viewport */
+          margin-top: -100vw; /* Correct positioning after rotation */
         }
       }
       
