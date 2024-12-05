@@ -28,6 +28,21 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<title>Maja Morosan</title>
+	 <style>
+
+
+        /* Fullscreen image styling */
+        .fullscreen-image {
+            position: fixed; /* Fixed position to stay in place */
+            top: 0;
+            left: 0;
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            object-fit: cover; /* Ensures the image covers the whole screen without distortion */
+            z-index: -1; /* Ensure the image is behind other content */
+        }
+
+    </style>
 </head>
 <body>
 
@@ -81,13 +96,16 @@
 	</nav>
 
 
-	<video autoplay muted loop>
+<!-- 	<video autoplay muted loop>
 		<source src="
 https://github.com/cronwel91/majasajt/blob/main/glitch.mp4" type="video/mp4">
 		<source src="
 https://github.com/cronwel91/majasajt/blob/main/glitch.mp4" type="video/ogg">
 		Your browser does not support the video tag.
-	  </video>
+	  </video> -->
+
+	    <img class="fullscreen-image" src="glitch.jpg" alt="Fullscreen Image">
+
 
 <!-- 	<video id="myVideo" width="320" height="240" controls onerror="this.style.display='none'; document.getElementById('fallbackImage').style.display='block';">
     <source src="glitch.mp4" type="video/mp4">
