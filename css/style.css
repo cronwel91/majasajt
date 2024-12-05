@@ -9842,7 +9842,7 @@ a {
       content: "";
       height: 1px;
       background: #d3d8dc; }
-
+      
       video {
         position: absolute;
         top: 0;
@@ -9852,11 +9852,18 @@ a {
         object-fit: cover; /* Ensures the video covers the viewport without distortion */
         z-index: -1; /* Push video to the background */
       }
-
+      
       @media (max-width: 768px) {
         .responsive-video {
-          height: 100vh; /* Make the video take full height on mobile */
-          object-fit: cover; /* Zoom in and cover the screen */
-          width: 100vw; /* Full width of the viewport */
+          width: 100vh; /* Set width to 100% of viewport height */
+          height: 100vw; /* Set height to 100% of viewport width */
+          object-fit: cover; /* Ensures the video still covers the screen */
+          transform: rotate(90deg); /* Rotate the video by 90 degrees */
+          transform-origin: center center; /* Ensures the video rotates around the center */
+          top: 50%; /* Vertically center the rotated video */
+          left: 50%; /* Horizontally center the rotated video */
+          margin-top: -50vw; /* Adjust for the video to fit properly after rotation */
+          margin-left: -50vh; /* Adjust for the video to fit properly after rotation */
         }
       }
+      
